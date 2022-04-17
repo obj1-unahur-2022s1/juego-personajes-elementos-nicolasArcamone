@@ -1,0 +1,47 @@
+import jugadoresPersonajes.*
+
+test "test para verificar valor recolectado de mario, verificar si mario es feliz y nivel de defensa de castillo" {
+   
+    luisa.personajeActivo(mario)
+    luisa.aparece(aurora)
+    luisa.aparece(castillo)
+	assert.equals(45,mario.valorRecolectado())
+	mario.esFeliz()
+	assert.that(true)
+    assert.equals(170,castillo.nivelDeDefensa())
+
+}
+
+test "test para verificar datos de jugadoresPersonajes" {
+   floki.nuevaArma(jabalina)
+   luisa.personajeActivo(mario)
+   luisa.aparece(tipa)
+   luisa.personajeActivo(floki)
+   luisa.aparece(aurora)
+   luisa.aparece(castillo)
+   assert.equals(16,mario.valorRecolectado())
+   assert.equals(9,tipa.altura())
+   mario.esFeliz()
+   assert.notThat(false)
+   aurora.estaConVida()
+   assert.notThat(false)
+   assert.equals(150, castillo.nivelDeDefensa())
+   jabalina.estaCargada()
+   assert.notThat(false)
+}
+
+
+test "test numero 3, verificacion de informacion de personajes" {
+	floki.nuevaArma(ballesta)
+	luisa.personajeActivo(floki)
+	luisa.aparece(aurora)
+    luisa.aparece(castillo)
+	assert.equals(0,mario.valorRecolectado())
+	aurora.estaConVida()
+	assert.that(true)
+	assert.equals(146,castillo.nivelDeDefensa())
+	ballesta.estaCargada()
+	assert.that(true)
+	assert.equals(8,ballesta.cantFlechas())
+	
+}
